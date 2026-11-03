@@ -25,8 +25,10 @@ EnergAI/
 └── README.md
 ```
 
-- **`energai_v1_main.csv`** — Contains one record per measurement configuration, with CNN and dataset identifiers, CNN characteristics, dataset information, hardware characteristics, inference settings, measurement information, and measured outcomes (net energy per image and classification accuracy).
+- **`energai_v1_main.csv`** — Contains one record per measurement configuration. Its columns cover identification metadata; CNN, image-dataset, hardware, and inference-configuration characteristics; measurement information; and measured outcomes (energy consumption and classification accuracy). See the [Data Dictionary](DATA_DICTIONARY.md) for detailed field descriptions and units.
+
 - **`energai_v1_repetitions.csv`** — Contains ten repetition records per configuration, identifying the CNN and CPU identifiers, batch size, and repetition number, followed by net and raw energy per image, number of evaluated images, measurement duration, and whether the repetition was retained for aggregation.
+
 - **`layers_by_model/`** — Contains a separate CSV for each CNN, named using its model_id (e.g., cifar10_chen_mobilenetv2_x0_5.csv). Each file describes the CNN's layers, including their types, configurations, tensor dimensions, computational characteristics, and connections. These are structural descriptions, not individual layer-energy measurements.
 
 The combination of `model_id`, `machine_id`, and `batch_size` connects each configuration in the main CSV to its ten repetitions. The `model_id` also identifies the corresponding CSV in layers_by_model/, where `layer_index` identifies each layer type.
