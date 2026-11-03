@@ -22,6 +22,7 @@ EnergAI/
 ├── energai_v1_repetitions.csv
 ├── layers_by_model/
 │   └── ...                  # one CSV per CNN
+├── Data_Dictionary.md
 └── README.md
 ```
 
