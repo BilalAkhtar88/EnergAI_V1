@@ -25,6 +25,12 @@ EnergAI/
 ├── energai_v1_repetitions.csv
 ├── layers_by_model/
 │   └── ...                  # one CSV per CNN
+├── scripts/
+│   ├── _common.py
+│   ├── 01_validate_dataset.py
+│   ├── ...
+│   └── 07_demo_predictors.py
+├── requirements.txt
 ├── Data_Dictionary.md
 ├── Measurement.md
 └── README.md
