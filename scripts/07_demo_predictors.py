@@ -13,7 +13,7 @@ INFERENCE_FEATURES = ["batch_size"]
 # Paper's held-out-family experiment. These may also be changed.
 HELD_OUT_FAMILIES = ["RepVGG", "InceptionV3", "GoogLeNet"]
 EXCLUDED_MODELS = ["cifar10_huyv_mobilenet_v2"]
-RIDGE_ALPHA = 10.0  # Paper setting (scikit-learn default is 1.0)
+RIDGE_ALPHA = 1.0  # Paper setting (scikit-learn default value is 1.0)
 
 
 def score(actual, predicted):
@@ -66,7 +66,8 @@ def main():
         ("Additive linear", x_train, x_test),
         ("Bilinear", bilinear(x_train), bilinear(x_test)),
     ]:
-        predicted = Ridge(alpha=RIDGE_ALPHA, fit_intercept=True).fit(inputs, y_train).predict(held_out)
+        predicted = Ridge(fit_intercept=True).fit(inputs, y_train).predict(held_out)
+#        predicted = Ridge(alpha=RIDGE_ALPHA, fit_intercept=True).fit(inputs, y_train).predict(held_out)
         rows.append({"predictor": name, **score(y_test, predicted)})
 
     results = pd.DataFrame(rows)
