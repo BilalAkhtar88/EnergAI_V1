@@ -39,3 +39,43 @@ EnergAI/
 The combination of `model_id`, `machine_id`, and `batch_size` connects each configuration in the main CSV to its ten repetitions. The `model_id` also identifies the corresponding CSV in layers_by_model/, where layer_index identifies each recorded operation for the layer.
 
 See the [**Data Dictionary**](Data_Dictionary.md) for detailed field descriptions and units.
+
+# Reproducing the Results
+
+The Python scripts in [`scripts/`](scripts/) reproduce the analyses, figures, and predictor demonstration reported in the EnergAI paper. They use `energai_v1_main.csv` and `energai_v1_repetitions.csv` from the repository root.
+
+### Requirements
+
+Python 3.10 or later is required. Install the dependencies from the repository root:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Analysis Scripts
+
+| Script | Description |
+|---|---|
+| [`01_validate_dataset.py`](scripts/01_validate_dataset.py) | Validates dataset completeness, repetition counts, and the reconstructed energy labels. |
+| [`02_pilot_cv.py`](scripts/02_pilot_cv.py) | Reproduces Figure 1 by analyzing measurement variability across different repetition counts. |
+| [`03_cv_ecdf.py`](scripts/03_cv_ecdf.py) | Reproduces Figure 2 by comparing the distributions of measurement variability before and after trimming. |
+| [`04_macs_params_energy.py`](scripts/04_macs_params_energy.py) | Reproduces Figures 3 and 4 by examining the relationships between CNN MAC counts, parameter counts, and energy consumption. |
+| [`05_batch_hardware.py`](scripts/05_batch_hardware.py) | Reproduces Figure 5 and analyzes the effects of batch size and hardware on inference energy. |
+| [`06_accuracy_provenance.py`](scripts/06_accuracy_provenance.py) | Reproduces the reported accuracy–energy comparisons and examines differences between two MobileNetV2 implementations. |
+| [`07_demo_predictors.py`](scripts/07_demo_predictors.py) | Demonstrates the use of EnergAI for training and evaluating additive and bilinear energy predictors, reproducing Table II. |
+
+### Running the Scripts
+
+Run the scripts from the repository root:
+
+```bash
+python scripts/01_validate_dataset.py
+python scripts/02_pilot_cv.py
+python scripts/03_cv_ecdf.py
+python scripts/04_macs_params_energy.py
+python scripts/05_batch_hardware.py
+python scripts/06_accuracy_provenance.py
+python scripts/07_demo_predictors.py
+```
+
+Generated figures and prediction results are saved in the `results/` directory.
