@@ -1,4 +1,7 @@
+**EnergAI** © 2026 by **Muhamamd Bilal Akhtar** and **Hina Anwar** is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" width="18" alt="Creative Commons"> <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" width="18" alt="Attribution">
+
 # EnergAI - A dataset for CNN inference-energy prediction
+
 EnergAI is an extensible dataset of measured energy consumption by convolutional neural networks (CNNs) during image-classification inference. It links measured energy to CNN characteristics, hardware information, inference settings, and measurement details to support the development and evaluation of **AI/ML-based CNN inference energy predictors**. Researchers can reuse these measurements to investigate different prediction approaches, reducing the need to repeat energy experiments when different input features are required.
 
 ## Dataset Overview
