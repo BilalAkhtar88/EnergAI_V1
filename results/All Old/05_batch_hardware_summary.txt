@@ -1,7 +1,0 @@
-Matched model-machine pairs: 128
-Batch 1->8 reduced energy: 126/128
-Median 1->8 reduction: 38.1829%
-Batch 32 energy greater than batch 8: 65/128
-Median max/min hardware energy ratio: 3.2431
-Pairwise Spearman rho minimum: 0.9872
-Pairwise Spearman rho maximum: 0.9960

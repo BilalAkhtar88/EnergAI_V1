@@ -1,3 +1,0 @@
-model_id,top1_accuracy_percent,energy_mj_at_M001_batch1,mac_count
-cifar10_chen_mobilenetv2_x0_75,94.08,12.472175823497,59310080
-cifar10_huyv_densenet161,94.07,91.162718646106,618894912
