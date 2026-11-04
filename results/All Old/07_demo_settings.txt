@@ -1,0 +1,44 @@
+HELD-OUT CNN FAMILIES: RepVGG, InceptionV3, GoogLeNet
+EXCLUDED MODEL IDs: cifar10_huyv_mobilenet_v2
+Train CNNs: 26, configurations: 416
+Test CNNs: 5, configurations: 80
+MODEL (including optional layer) FEATURES: mac_count, total_parameter_count
+HARDWARE FEATURES: hw_cpu_physical_cores, hw_cpu_max_freq_mhz, hw_l3_cache_kb
+WORKLOAD FEATURES: batch_size
+Ridge alpha: 10.0
+Scaler: standardize original numeric inputs using training data only
+Bilinear: concatenate standardized inputs and pairwise (CNN x hardware) products
+Target: trimmed mean net CPU-package energy (joules per image)
+Train models:
+  cifar10_chen_mobilenetv2_x0_5
+  cifar10_chen_mobilenetv2_x0_75
+  cifar10_chen_mobilenetv2_x1_0
+  cifar10_chen_mobilenetv2_x1_4
+  cifar10_chen_resnet20
+  cifar10_chen_resnet32
+  cifar10_chen_resnet44
+  cifar10_chen_resnet56
+  cifar10_chen_shufflenetv2_x0_5
+  cifar10_chen_shufflenetv2_x1_0
+  cifar10_chen_shufflenetv2_x1_5
+  cifar10_chen_shufflenetv2_x2_0
+  cifar10_chen_vgg11_bn
+  cifar10_chen_vgg13_bn
+  cifar10_chen_vgg16_bn
+  cifar10_chen_vgg19_bn
+  cifar10_huyv_densenet121
+  cifar10_huyv_densenet161
+  cifar10_huyv_densenet169
+  cifar10_huyv_resnet18
+  cifar10_huyv_resnet34
+  cifar10_huyv_resnet50
+  cifar10_huyv_vgg11_bn
+  cifar10_huyv_vgg13_bn
+  cifar10_huyv_vgg16_bn
+  cifar10_huyv_vgg19_bn
+Test models:
+  cifar10_chen_repvgg_a0
+  cifar10_chen_repvgg_a1
+  cifar10_chen_repvgg_a2
+  cifar10_huyv_googlenet
+  cifar10_huyv_inception_v3

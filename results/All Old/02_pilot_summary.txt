@@ -1,0 +1,9 @@
+Pilot models: cifar10_huyv_mobilenet_v2, cifar10_huyv_resnet50, cifar10_huyv_vgg13_bn
+Pilot machines: machine_001, machine_004
+Pilot configurations: 24
+Maximum trimmed CV at n=10: 1.4972%
+Maximum absolute trimmed mean change 9->10: 0.2005%
+Batch 1: max CV at n=8,9,10: 0.9887%, 0.9364%, 0.8673%
+Batch 8: max CV at n=8,9,10: 0.7427%, 0.8913%, 0.8335%
+Batch 16: max CV at n=8,9,10: 0.6943%, 1.4937%, 1.4972%
+Batch 32: max CV at n=8,9,10: 1.2887%, 1.3106%, 1.2698%

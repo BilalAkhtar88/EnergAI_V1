@@ -1,0 +1,7 @@
+Configurations: 512
+Raw 95th percentile CV (%): 1.635827
+Trimmed 95th percentile CV (%): 1.202209
+Relative P95 reduction (%): 26.507541
+Raw maximum CV (%): 9.540891
+Trimmed maximum CV (%): 2.901566
+Zoomed plot XMAX (%): 3.0 (DOES NOT filter data)
