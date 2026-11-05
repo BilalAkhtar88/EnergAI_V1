@@ -18,13 +18,9 @@ These permissions are subject to the following conditions:
 
 ## Official License
 
-The complete and legally binding license terms are available at:
+The complete and legally binding license terms are available at https://creativecommons.org/licenses/by/4.0/legalcode
 
-https://creativecommons.org/licenses/by/4.0/legalcode
-
-License summary:
-
-https://creativecommons.org/licenses/by/4.0/
+License summary is available at https://creativecommons.org/licenses/by/4.0/
 
 ## Third-Party Materials
 
