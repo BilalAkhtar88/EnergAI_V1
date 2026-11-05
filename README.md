@@ -42,9 +42,7 @@ EnergAI/
 
 - **`layers_by_model/`** — Contains a separate CSV for each CNN, named using its model_id (e.g., cifar10_chen_mobilenetv2_x0_5.csv). Each file describes the CNN's layers, including their types, configurations, tensor dimensions, computational characteristics, and connections. These are structural descriptions, not individual layer-energy measurements.
 
-The combination of `model_id`, `machine_id`, and `batch_size` connects each configuration in the main CSV to its ten repetitions. The `model_id` also identifies the corresponding CSV in layers_by_model/, where layer_index identifies each recorded operation for the layer. These connections are illustrated in the [**Schema Diagram**](schema.png).
-
-See the [**Data Dictionary**](Data_Dictionary.md) for detailed field descriptions and units.
+The combination of `model_id`, `machine_id`, and `batch_size` connects each configuration in the main CSV to its ten repetitions. The `model_id` also identifies the corresponding CSV in layers_by_model/, where layer_index identifies each recorded operation for the layer. These connections are illustrated in the [**Schema Diagram**](schema.png), while the full field definitions and units are documented in the [**Data Dictionary**](Data_Dictionary.md).
 
 # Reproducing the Results
 
