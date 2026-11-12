@@ -90,13 +90,3 @@ Generated figures and prediction results are saved in the `results/` directory.
 Contributions that extend EnergAI with new CNNs, hardware platforms, inference configurations, or predictor features are welcome. Contributors should follow the dataset structure described in the [Data Dictionary](Data_Dictionary.md) and document their measurement conditions and procedures as illustrated in the [Energy Measurement Protocol](Measurement.md).
 
 New contributions can be proposed through GitHub issues or pull requests.
-
-## Citation
-
-
-## Citation
-
-If you use EnergAI in your research, please cite this repository and the accompanying paper, **"EnergAI: An Open Dataset for CNN Inference-Energy Prediction"** by **Muhammad Bilal Akhtar and Hina Anwar**.
-
-A formal citation will be provided once the paper is accepted and published.
-
