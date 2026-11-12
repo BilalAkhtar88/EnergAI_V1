@@ -61,12 +61,12 @@ pip install -r requirements.txt
 | Script | Description |
 |---|---|
 | [`01_validate_dataset.py`](scripts/01_validate_dataset.py) | Validates dataset completeness, repetition counts, and the reconstructed energy labels. |
-| [`02_pilot_cv.py`](scripts/02_pilot_cv.py) | Reproduces Figure 1 by analyzing measurement variability across different repetition counts. |
-| [`03_cv_ecdf.py`](scripts/03_cv_ecdf.py) | Reproduces Figure 2 by comparing the distributions of measurement variability before and after trimming. |
-| [`04_macs_params_energy.py`](scripts/04_macs_params_energy.py) | Reproduces Figures 3 and 4 by examining the relationships between CNN MAC counts, parameter counts, and energy consumption. |
-| [`05_batch_hardware.py`](scripts/05_batch_hardware.py) | Reproduces Figure 5 and analyzes the effects of batch size and hardware on inference energy. |
+| [`02_pilot_cv.py`](scripts/02_pilot_cv.py) | Reproduces Figure 2 by analyzing measurement variability across different repetition counts. |
+| [`03_cv_ecdf.py`](scripts/03_cv_ecdf.py) | Reproduces Figure 3 by comparing the distributions of measurement variability before and after trimming. |
+| [`04_macs_params_energy.py`](scripts/04_macs_params_energy.py) | Reproduces Figures 4 and 5 by examining the relationships between CNN MAC counts, parameter counts, and energy consumption. |
+| [`05_batch_hardware.py`](scripts/05_batch_hardware.py) | Reproduces Figure 6 and analyzes the effects of batch size and hardware on inference energy. |
 | [`06_accuracy_provenance.py`](scripts/06_accuracy_provenance.py) | Reproduces the reported accuracy–energy comparisons and examines differences between two MobileNetV2 implementations. |
-| [`07_demo_predictors.py`](scripts/07_demo_predictors.py) | Demonstrates the use of EnergAI for training and evaluating additive and bilinear energy predictors, reproducing Table II. |
+| [`07_demo_predictors.py`](scripts/07_demo_predictors.py) | Demonstrates the use of EnergAI for training and evaluating additive and bilinear energy predictors, reproducing Table III. |
 
 ### Running the Scripts
 
