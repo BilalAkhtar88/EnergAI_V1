@@ -1,4 +1,4 @@
-"""Paper Figure 2: empirical CDF of raw and min/max-trimmed energy CV."""
+"""Paper Figure 3: empirical CDF of raw and min/max-trimmed energy CV."""
 import numpy as np
 import matplotlib.pyplot as plt
 from _common import KEY, REP_ENERGY, repetitions, trimmed, cv, save_plot
@@ -14,7 +14,7 @@ def main():
     p95_raw = float(np.percentile(raw, 95))
     p95_trimmed = float(np.percentile(kept, 95))
     fig, ax = plt.subplots(figsize=(8.5, 5.3))
-    # Match the paper's Figure 2: red raw ECDF, blue trimmed ECDF.
+    # Match the paper's Figure 3: red raw ECDF, blue trimmed ECDF.
     for values, label, color in [
         (raw, "Before trimming (10 runs)", "tab:red"),
         (kept, "After trimming (8 runs)", "tab:blue"),
@@ -41,9 +41,9 @@ def main():
     ax.set_ylabel("Configurations with CV ≤ x (%)")
     ax.grid(alpha=0.18)
     ax.legend(loc="lower right", frameon=False)
-    save_plot("fig2_cv_ecdf.png", vector=True)
+    save_plot("fig3_cv_ecdf.png", vector=True)
 
-    print("Figure 2 saved: results/fig2_cv_ecdf.png and .pdf")
+    print("Figure 3 saved: results/fig3_cv_ecdf.png and .pdf")
     print(f"95th percentile CV: {p95_raw:.2f}% → {p95_trimmed:.2f}%")
     print(f"Maximum CV: {max(raw):.2f}% → {max(kept):.2f}%")
 
