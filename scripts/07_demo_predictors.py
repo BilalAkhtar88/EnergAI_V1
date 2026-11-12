@@ -1,4 +1,4 @@
-"""Paper Table II: additive and bilinear ridge regressors on held-out CNN families."""
+"""Paper Table III: additive and bilinear ridge regressors on held-out CNN families."""
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import Ridge
@@ -72,7 +72,7 @@ def main():
 
     results = pd.DataFrame(rows)
     RESULTS.mkdir(exist_ok=True)
-    results.to_csv(RESULTS / "table2_demo_predictors.csv", index=False)
+    results.to_csv(RESULTS / "table3_demo_predictors.csv", index=False)
     print(f"Train: {train.model_id.nunique()} CNNs, {len(train)} configurations")
     print(f"Test: {test.model_id.nunique()} CNNs, {len(test)} configurations")
     print("Ridge alpha:", RIDGE_ALPHA)
@@ -80,7 +80,7 @@ def main():
     print("Hardware features:", HARDWARE_FEATURES)
     print("Inference features:", INFERENCE_FEATURES)
     print(results.round(2).to_string(index=False))
-    print("Table II saved: results/table2_demo_predictors.csv")
+    print("Table III saved: results/table3_demo_predictors.csv")
 
 
 if __name__ == "__main__":
