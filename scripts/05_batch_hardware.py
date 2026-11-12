@@ -1,4 +1,4 @@
-"""Paper Figure 5: batch-size and hardware effects on energy per image."""
+"""Paper Figure 6: batch-size and hardware effects on energy per image."""
 import numpy as np
 import matplotlib.pyplot as plt
 from _common import ENERGY, main_data, save_plot
@@ -16,7 +16,7 @@ def main():
     plt.ylabel("Median energy (mJ/image, across CNNs)")
     plt.legend()
     plt.grid(alpha=0.2)
-    save_plot("fig5_batch_hardware.png")
+    save_plot("fig6_batch_hardware.png")
 
     pairs = data.pivot(index=["machine_id", "model_id"], columns="batch_size", values=ENERGY)
     ratios = data.groupby(["model_id", "batch_size"])[ENERGY].agg(["min", "max"])
@@ -24,7 +24,7 @@ def main():
     rank = by_machine.corr(method="spearman").to_numpy()
     rank = rank[np.triu_indices_from(rank, k=1)]
 
-    print("Figure 5 saved: results/fig5_batch_hardware.png")
+    print("Figure 6 saved: results/fig6_batch_hardware.png")
     print(f"Batch 1→8 energy reduction: {(pairs[8] < pairs[1]).sum()}/{len(pairs)} pairs")
     print(f"Median reduction: {100 * np.median(1 - pairs[8] / pairs[1]):.1f}%")
     print(f"Batch 32 > batch 8: {(pairs[32] > pairs[8]).sum()}/{len(pairs)} pairs")
