@@ -1,4 +1,4 @@
-"""Paper Figures 3–4: MAC/parameter relationships with energy at batch size 1."""
+"""Paper Figures 4–5: MAC/parameter relationships with energy at batch size 1."""
 import matplotlib.pyplot as plt
 from _common import ENERGY, main_data, save_plot
 
@@ -6,8 +6,8 @@ from _common import ENERGY, main_data, save_plot
 def main():
     data = main_data()
     for feature, name, output in [
-        ("mac_count", "MAC count", "fig3_macs_energy.png"),
-        ("total_parameter_count", "Parameter count", "fig4_params_energy.png"),
+        ("mac_count", "MAC count", "fig4_macs_energy.png"),
+        ("total_parameter_count", "Parameter count", "fig5_params_energy.png"),
     ]:
         for machine, group in data[data.batch_size == 1].groupby("machine_id"):
             plt.scatter(group[feature] / 1e6, group[ENERGY] * 1000,
@@ -26,7 +26,7 @@ def main():
 
     print(f"Net energy range: {data[ENERGY].min() * 1000:.2f} to "
           f"{data[ENERGY].max() * 1000:.2f} mJ/image")
-    print("Figures 3–4 saved in results/")
+    print("Figures 4–5 saved in results/")
 
 
 if __name__ == "__main__":
